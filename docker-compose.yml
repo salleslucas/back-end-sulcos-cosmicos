@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  # ── API FastAPI + SQLite ────────────────────────────────────────────────────
+  api:
+    build: .
+    container_name: sulco-cosmico-api
+    ports:
+      - "8000:8000"           # host:container — acesse em http://localhost:8000
+    volumes:
+      - .:/app                # código-fonte (hot-reload do uvicorn)
+                              # o sulco_cosmico.db fica na pasta local do projeto
+                              # → acessível diretamente pelo DBeaver
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
