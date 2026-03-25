@@ -8,9 +8,9 @@ e define os endpoints da API de gerenciamento de pedidos. A arquitetura adotada
 segue o padrão de separação de responsabilidades em camadas:
 
   ┌─────────────────────────────────────────────────────────────────────┐
-  │  [Externo]  FakeStore API  →  fornece o catálogo de produtos        │
-  │  [Este]     FastAPI / SQLite →  gerencia pedidos (CRUD completo)    │
-  │  [Externo]  React / Vite   →  interface do usuário (front-end)      │
+  │  [Externo]  iTunes Search API  →  fornece o catálogo de álbuns     │
+  │  [Este]     FastAPI / SQLite   →  gerencia pedidos (CRUD completo) │
+  │  [Externo]  React / Vite       →  interface do usuário (front-end) │
   └─────────────────────────────────────────────────────────────────────┘
 
 A persistência é realizada em banco SQLite por meio do ORM SQLAlchemy,
@@ -47,7 +47,7 @@ app = FastAPI(
     description=(
         "API REST de pedidos para o e-commerce de vinis **Sulcos Cósmicos**.\n\n"
         "Persistência: **SQLite** via SQLAlchemy.\n\n"
-        "Componente externo integrado: **FakeStore API** (catálogo de produtos)."
+        "Componente externo integrado: **iTunes Search API** (catálogo de álbuns)."
     ),
     version="2.0.0",
 )
