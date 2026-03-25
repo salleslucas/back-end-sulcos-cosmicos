@@ -170,3 +170,9 @@ function MeuComponente() {
   } = useOrders();
 }
 ```
+
+---
+
+## Autor
+
+**Lucas Salles** — PUC-Rio, Pós-Graduação em Desenvolvimento Full Stack, Sprint 2
