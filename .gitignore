@@ -1,0 +1,44 @@
+# Ambiente virtual Python
+.venv/
+venv/
+env/
+ENV/
+.env/
+
+# Variáveis de ambiente (contém segredos)
+.env
+.env.local
+.env.*.local
+
+# Banco de dados SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# Cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# Distribuição / empacotamento
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# MyPy
+.mypy_cache/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.suo
+*.sw?
+.DS_Store
+Thumbs.db

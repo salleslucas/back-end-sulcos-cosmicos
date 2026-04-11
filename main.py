@@ -70,6 +70,20 @@ app.add_middleware(
 )
 
 
+# ── Rota raiz ────────────────────────────────────────────────────────────────
+
+@app.get("/", tags=["Infra"], summary="Rota raiz da API")
+def root():
+    """
+    Rota de boas-vindas da API Sulcos Cósmicos.
+    """
+    return {
+        "message": "Bem-vindo à API Sulcos Cósmicos 🎵",
+        "docs": "/docs",
+        "health": "/health",
+    }
+
+
 # ── Health-check ──────────────────────────────────────────────────────────────
 
 @app.get("/health", tags=["Infra"], summary="Verificação de saúde do serviço")
